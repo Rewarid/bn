@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Binance Crypto Bonus</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 240, 240, 0.85)), 
-                        url('https://cdn.pixabay.com/photo/2024/11/25/15/04/whale-9223462_1280.jpg');
+      background-image: url('https://cdn.pixabay.com/photo/2024/11/25/15/04/whale-9223462_1280.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      position: relative;
+    }
+
+    /* Blur overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(240,240,240,0.85));
       backdrop-filter: blur(2px);
+      z-index: -1;
     }
 
     .bonus-container {
@@ -34,17 +45,23 @@
     }
 
     .claim-button {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
       background-color: #f0b90b;
       color: #000;
       font-weight: bold;
-      padding: 12px 25px;
+      padding: 14px 20px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 1rem;
       transition: background 0.3s;
+      text-align: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      user-select: none;
     }
-
     .claim-button:hover {
       background-color: #ddb20a;
     }
@@ -69,9 +86,20 @@
       font-size: 13px;
       margin-top: 18px;
     }
+
+    @media (max-width: 480px) {
+      .claim-button {
+        font-size: 16px;
+        padding: 14px 16px;
+      }
+      .bonus-container {
+        margin: 20px;
+        padding: 20px 15px;
+      }
+    }
   </style>
 
-  <!-- External Script -->
+  <!-- CPABuild / AdBluMedia Content Locker Script -->
   <script type="text/javascript">
     var Ghage_Ejt_rcjbQc = {"it": 4501753, "key": "92ec8"};
   </script>
@@ -80,9 +108,7 @@
 <body>
 
   <div class="bonus-container">
-
-    <!-- Binance Logo -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png" alt="Binance Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png" alt="Binance Logo" />
 
     <h2 style="color: #e6ac00; margin-bottom: 12px;">🎁 Claim up to $25 in Binance Bonus!</h2>
 
@@ -94,7 +120,6 @@
       This bonus is reserved for you. Please verify within:
     </p>
 
-    <!-- Countdown Timer -->
     <div id="timer">
       ⏳ <span id="countdown">07:00</span> remaining
     </div>
@@ -114,9 +139,9 @@
     </p>
   </div>
 
-  <!-- Countdown Timer Script -->
+  <!-- Countdown Timer -->
   <script>
-    let timeLeft = 420; // 7 minutes in seconds
+    let timeLeft = 420; // 7 minutes
     const countdownEl = document.getElementById("countdown");
 
     const timer = setInterval(function () {
