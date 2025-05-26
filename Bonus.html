@@ -11,20 +11,20 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      color: #fff; /* White text for dark background */
-      background: #121212; /* Dark background for night version */
+      background-color: #121212;
+      color: #fff;
     }
     .container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 50px auto;
-      background: rgba(30, 30, 30, 0.9); /* Dark translucent container */
+      background: rgba(30, 30, 30, 0.9);
       padding: 40px;
       border-radius: 14px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
       position: relative;
     }
     h1 {
-      color: #f3ba2f; /* Gold color for text */
+      color: #f3ba2f;
       font-size: 30px;
       text-align: center;
       margin-bottom: 20px;
@@ -52,12 +52,12 @@
     }
     .note, .disclaimer {
       font-size: 14px;
-      color: #bbb; /* Lighter text for the disclaimer */
+      color: #bbb;
       margin-top: 15px;
       text-align: center;
     }
     .trust-section {
-      background: #2e3b3b; /* Slightly darkened background for trust section */
+      background: #2e3b3b;
       border-left: 5px solid #00b894;
       padding: 20px;
       border-radius: 10px;
@@ -67,45 +67,50 @@
       margin: 10px 0 0 20px;
     }
     .testimonial {
-      background: #232323; /* Dark background for testimonials */
+      background: #232323;
       padding: 15px;
       margin-top: 20px;
       border-left: 4px solid #ccc;
       border-radius: 8px;
       font-size: 15px;
-      color: #ddd; /* Light text color */
+      color: #ddd;
     }
     .testimonial strong {
       color: #00b894;
     }
     #countdown {
-      text-align: center; 
-      font-size: 18px; 
-      color: #f39c12; /* Gold countdown timer */
+      text-align: center;
+      font-size: 18px;
+      color: #f39c12;
       margin: 20px 0;
       font-weight: bold;
     }
     #liveUserPopup {
-      display: none; 
-      position: fixed; 
-      bottom: 20px; 
-      right: 20px; 
-      background: #27ae60; 
-      color: white; 
-      padding: 15px 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
-      font-size: 14px; 
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #27ae60;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      font-size: 14px;
       z-index: 9999;
     }
+    .faq {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
     details summary {
-      font-weight: bold; 
-      cursor: pointer; 
+      font-weight: bold;
+      cursor: pointer;
       margin-bottom: 5px;
     }
     details p {
       margin-left: 15px;
-      margin-top: 0;
     }
   </style>
 </head>
@@ -120,10 +125,10 @@
     <div class="trust-section">
       <strong>Why Trust Us?</strong>
       <ul>
-        <li>SSL-secured system</li>
-        <li>Used by 100,000+ users globally</li>
-        <li>Daily updated verification system</li>
-        <li>No card or sensitive info needed</li>
+        <li><img src="ssl-badge.png" alt="SSL Secured" /> SSL-secured system</li>
+        <li><img src="users-icon.png" alt="Global Users" /> Used by 100,000+ users globally</li>
+        <li><img src="verification-badge.png" alt="Daily Verification" /> Daily updated verification system</li>
+        <li><img src="no-card-icon.png" alt="No Card Needed" /> No card or sensitive info needed</li>
       </ul>
     </div>
 
@@ -146,26 +151,24 @@
     <p class="disclaimer">This promotional offer is not affiliated with Binance directly but follows all legal guidelines to provide verified CPA offers.</p>
 
     <!-- FAQ Section -->
-    <div style="margin-top: 30px;">
+    <div class="faq">
       <h2 style="color:#f3ba2f; text-align:center;">Frequently Asked Questions</h2>
-      <div style="max-width: 650px; margin: 10px auto;">
-        <details>
-          <summary>Is this Binance bonus legit?</summary>
-          <p>Yes! Our offer is 100% legitimate and used by thousands worldwide.</p>
-        </details>
-        <details>
-          <summary>Do I need to provide my credit card?</summary>
-          <p>No credit card or payment info is required for this bonus.</p>
-        </details>
-        <details>
-          <summary>How soon will I get my bonus?</summary>
-          <p>Bonuses are credited instantly after completing the unlock step.</p>
-        </details>
-        <details>
-          <summary>Who can claim this bonus?</summary>
-          <p>This offer is for new Binance users in USA, UK, Canada, and other supported regions.</p>
-        </details>
-      </div>
+      <details>
+        <summary>Is this Binance bonus legit?</summary>
+        <p>Yes! Our offer is 100% legitimate and used by thousands worldwide.</p>
+      </details>
+      <details>
+        <summary>Do I need to provide my credit card?</summary>
+        <p>No credit card or payment info is required for this bonus.</p>
+      </details>
+      <details>
+        <summary>How soon will I get my bonus?</summary>
+        <p>Bonuses are credited instantly after completing the unlock step.</p>
+      </details>
+      <details>
+        <summary>Who can claim this bonus?</summary>
+        <p>This offer is for new Binance users in USA, UK, Canada, and other supported regions.</p>
+      </details>
     </div>
   </div>
 
