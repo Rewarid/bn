@@ -9,28 +9,30 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7fb;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #fff; /* White text for dark background */
+      background: #121212; /* Dark background for night version */
     }
     .container {
       max-width: 700px;
       margin: 50px auto;
-      background: #fff;
+      background: rgba(30, 30, 30, 0.9); /* Dark translucent container */
       padding: 40px;
       border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
       position: relative;
     }
     h1 {
-      color: #f3ba2f;
+      color: #f3ba2f; /* Gold color for text */
       font-size: 30px;
       text-align: center;
+      margin-bottom: 20px;
     }
     p {
       font-size: 16px;
       line-height: 1.7;
+      text-align: center;
     }
     .btn {
       display: block;
@@ -50,12 +52,12 @@
     }
     .note, .disclaimer {
       font-size: 14px;
-      color: #777;
+      color: #bbb; /* Lighter text for the disclaimer */
       margin-top: 15px;
       text-align: center;
     }
     .trust-section {
-      background: #e9f8f3;
+      background: #2e3b3b; /* Slightly darkened background for trust section */
       border-left: 5px solid #00b894;
       padding: 20px;
       border-radius: 10px;
@@ -65,26 +67,24 @@
       margin: 10px 0 0 20px;
     }
     .testimonial {
-      background: #fdfdfd;
+      background: #232323; /* Dark background for testimonials */
       padding: 15px;
       margin-top: 20px;
       border-left: 4px solid #ccc;
       border-radius: 8px;
       font-size: 15px;
-      color: #444;
+      color: #ddd; /* Light text color */
     }
     .testimonial strong {
       color: #00b894;
     }
-    /* Countdown Timer Style */
     #countdown {
       text-align: center; 
       font-size: 18px; 
-      color: #f39c12; 
+      color: #f39c12; /* Gold countdown timer */
       margin: 20px 0;
       font-weight: bold;
     }
-    /* Live User Popup Style */
     #liveUserPopup {
       display: none; 
       position: fixed; 
@@ -98,7 +98,6 @@
       font-size: 14px; 
       z-index: 9999;
     }
-    /* FAQ Section */
     details summary {
       font-weight: bold; 
       cursor: pointer; 
@@ -109,17 +108,13 @@
       margin-top: 0;
     }
   </style>
-  <script type="text/javascript">
-    var ghfIR_KTj_nvNCpc={"it":4501753,"key":"92ec8"};
-</script>
-<script src="https://dfmpe7igjx4jo.cloudfront.net/6d36471.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Claim Your Verified $25 Binance Bonus</h1>
     <p>
       Start your crypto journey with a <strong>real $25 bonus</strong> from Binance. This offer is fully legitimate, verified by thousands of users, and does not require any hidden payments. 
-      All you need to do is complete a short verification process to receive your reward instantly.
+      Complete the simple verification process to unlock your bonus instantly.
     </p>
 
     <div class="trust-section">
@@ -143,7 +138,7 @@
     </div>
 
     <!-- Countdown Timer -->
-    <div id="countdown">Loading offer timer...</div>
+    <div id="countdown">Offer expires in: <strong>Loading...</strong></div>
 
     <a href="YOUR_CONTENT_LOCKER_LINK_HERE" class="btn">Unlock Your Bonus Now</a>
 
@@ -180,8 +175,8 @@
   </div>
 
   <script>
-    // Countdown Timer (24 hours)
-    const countDownDate = new Date(new Date().getTime() + 24*60*60*1000).getTime();
+    // Countdown Timer (4 hours)
+    const countDownDate = new Date(new Date().getTime() + 4*60*60*1000).getTime();
 
     const countdownFunction = setInterval(function() {
       const now = new Date().getTime();
@@ -204,13 +199,13 @@
     function showLiveUserPopup() {
       const popup = document.getElementById('liveUserPopup');
       popup.style.display = 'block';
-      setTimeout(() => { popup.style.display = 'none'; }, 4000);
+      setTimeout(() => { popup.style.display = 'none'; }, 3000); // Reduced display time for faster interaction
     }
 
-    // Show popup randomly every 25-45 seconds
+    // Show popup randomly every 15-20 seconds (to create urgency)
     setInterval(() => {
       showLiveUserPopup();
-    }, Math.floor(Math.random() * (45000 - 25000 + 1)) + 25000);
+    }, Math.floor(Math.random() * (20000 - 15000 + 1)) + 15000); // Faster display frequency
   </script>
 </body>
 </html>
